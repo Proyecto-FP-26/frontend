@@ -1,3 +1,19 @@
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  line-height: 0;
+  pointer-events: none;
+  transform-origin: center;
+  will-change: transform, filter;
+}
 
+.icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
 
 /*# sourceMappingURL=icon.css.map */
