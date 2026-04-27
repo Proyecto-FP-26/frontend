@@ -1,16 +1,9 @@
-# React + Vite
+# Frontend del proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este frontend está desarrollado con React y Vite, con una organización de componentes orientada a Atomic Design para mantener una estructura clara y escalable. La interfaz se divide en niveles como átomos, moléculas, organismos y vistas, lo que permite reutilizar piezas pequeñas y construir pantallas completas de forma consistente.
 
-Currently, two official plugins are available:
+A nivel de estilos se utiliza la metodología BEM (Block, Element, Modifier). Cada clase está nombrada de forma explícita para reflejar su bloque, sus elementos internos y sus variaciones, evitando colisiones y facilitando el mantenimiento del CSS a medida que crece la aplicación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Para trabajar en local se instala primero el proyecto con `npm install` y se arranca con `npm run dev`. El entorno de desarrollo levanta el frontend con recarga en caliente, lo que permite iterar rápido sobre componentes y estilos siguiendo la estructura definida.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+El despliegue se realiza generando una versión optimizada con `npm run build`, que crea los archivos estáticos en `dist/`. Esos archivos se publican en el servicio de hosting configurado para el proyecto. En un flujo habitual, cada cambio se versiona en Git y, al actualizar la rama de despliegue, el proveedor ejecuta la build y sirve automáticamente la versión más reciente del frontend.

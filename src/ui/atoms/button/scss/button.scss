@@ -1,0 +1,46 @@
+@use '../../../../common/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.875rem;
+
+  border: 1px solid $color-border-soft;
+  border-radius: $radius-sm;
+  background-color: $primary;
+  box-shadow: $shadow-sm;
+  color: $color-surface;
+
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.04);
+  }
+
+  &:active {
+    filter: brightness(0.97);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: none;
+  }
+}
