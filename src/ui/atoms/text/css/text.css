@@ -1,0 +1,39 @@
+.text {
+  margin: 0;
+  color: #1e293b;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text--default {
+  color: #1e293b;
+}
+
+.text--muted {
+  color: #475569;
+}
+
+.text--primary {
+  color: #3b82f6;
+}
+
+.text--error {
+  color: #dc2626;
+}
+
+.text--white {
+  color: #ffffff;
+}
+
+.text--custom-color {
+  color: var(--text-custom-color);
+}
+
+.button .text {
+  display: inline;
+  margin: 0;
+  line-height: 1;
+}
+
+/*# sourceMappingURL=text.css.map */
