@@ -1,0 +1,53 @@
+@use '../../../../common/variables' as *;
+
+.link {
+  --link-color: #{$color-text-muted};
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: $radius-sm;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: color 0.18s ease;
+
+  &:hover {
+    --link-color: #{$color-primary};
+  }
+
+  &:focus-visible {
+    outline: 2px solid color-mix(in srgb, currentColor 65%, transparent);
+    outline-offset: 2px;
+  }
+
+  .icon-wrapper {
+    font-size: 0.95em;
+  }
+}
+
+.link__text {
+  line-height: 1.25;
+}
+
+.link--primary {
+  --link-color: #{$color-primary};
+}
+
+.link--muted {
+  --link-color: #{$color-text-muted};
+}
+
+.link--error {
+  --link-color: #{$color-error};
+}
+
+.link--white {
+  --link-color: #{$color-surface};
+}
+
+.link--active {
+  --link-color: #{$color-primary};
+}

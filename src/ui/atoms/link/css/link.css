@@ -1,0 +1,49 @@
+.link {
+  --link-color: #475569;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 6px;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: color 0.18s ease;
+}
+.link:hover {
+  --link-color: #3b82f6;
+}
+.link:focus-visible {
+  outline: 2px solid color-mix(in srgb, currentColor 65%, transparent);
+  outline-offset: 2px;
+}
+.link .icon-wrapper {
+  font-size: 0.95em;
+}
+
+.link__text {
+  line-height: 1.25;
+}
+
+.link--primary {
+  --link-color: #3b82f6;
+}
+
+.link--muted {
+  --link-color: #475569;
+}
+
+.link--error {
+  --link-color: #dc2626;
+}
+
+.link--white {
+  --link-color: #ffffff;
+}
+
+.link--active {
+  --link-color: #3b82f6;
+}
+
+/*# sourceMappingURL=link.css.map */
