@@ -1,0 +1,43 @@
+.pointer {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid #ffffff;
+  border-radius: 50% 50% 50% 0;
+  background-color: #dc2626;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.22);
+  cursor: pointer;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.pointer::before, .pointer::after {
+  position: absolute;
+  content: "";
+}
+.pointer::before {
+  inset: 50% auto auto 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.pointer::after {
+  inset: -0.55rem;
+  border: 2px solid rgba(220, 38, 38, 0.24);
+  border-radius: 50%;
+  animation: pointer-pulse 1.8s ease-out infinite;
+}
+
+@keyframes pointer-pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.65);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+/*# sourceMappingURL=pointer.css.map */

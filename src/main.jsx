@@ -6,6 +6,7 @@ import {MdEdit, MdList, MdLocationOn, MdMap} from "react-icons/md";
 import Text from "./ui/atoms/text/text.jsx";
 import Link from "./ui/atoms/link/link.jsx";
 import Card from "./ui/atoms/card/card.jsx"
+import Pointer from "./ui/atoms/pointer/pointer.jsx";
 
 
 createRoot(document.getElementById('root')).render(
@@ -18,5 +19,6 @@ createRoot(document.getElementById('root')).render(
       <Link href="/incidents" icon={MdList}>Incident List</Link>
       <Link href="/resources" icon={MdLocationOn}>Resource Mgmt</Link>
       <Card></Card>
+      <Pointer/>
   </StrictMode>,
 )
