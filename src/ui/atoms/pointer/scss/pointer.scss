@@ -1,5 +1,13 @@
 @use '../../../../common/variables' as *;
 
+.pointer-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
 .pointer {
   position: relative;
   width: 1.5rem;
@@ -32,6 +40,12 @@
     border: 2px solid rgba(220, 38, 38, 0.24);
     border-radius: 50%;
     animation: pointer-pulse 1.8s ease-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pointer::after {
+    animation: none;
   }
 }
 

@@ -1,0 +1,24 @@
+@use '../../../../common/variables' as *;
+
+.map {
+  width: 100%;
+  max-width: 900px;
+  height: 420px;
+  overflow: hidden;
+  border: $border-subtle;
+  border-radius: $radius-lg;
+  background-color: $neutral-100;
+}
+
+.map .maplibregl-map {
+  width: 100%;
+  height: 100%;
+  font-family: $font-family-base;
+}
+
+.map .maplibregl-ctrl-group {
+  overflow: hidden;
+  border: $border-subtle;
+  border-radius: $radius-sm;
+  box-shadow: none;
+}
